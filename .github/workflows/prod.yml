@@ -18,12 +18,12 @@ jobs:
            uses: SonarSource/sonarcloud-github-action@v2
            with:
              args: >
-               - Dsonar.projectKey=productionbranch
-               - Dsonar.organization=bhandari22
-               - Dsonar.sources=.
-               - Dsonar.exclusions=vendor/**,.github/**
-               - Dsonar.qualitygate.wait=true
-               - Dsonar.projectVersion=${{ env.VERSION_TAG }}  
+               -Dsonar.projectKey=productionbranch
+               -Dsonar.organization=bhandari22
+               -Dsonar.sources=.
+               -Dsonar.exclusions=vendor/**,.github/**
+               -Dsonar.qualitygate.wait=true
+               -Dsonar.projectVersion=${{ env.VERSION_TAG }}  
            env:
              SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
          
