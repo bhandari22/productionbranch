@@ -9,7 +9,7 @@ if(isset($_POST['login'])){
            echo "<h4 id='error_login'>Enter email</h4>";
     }
 
-    if(empty($_POST[''])){
+    if(empty($_POST['pwd'])){
         echo "<h4 id='error_login'>Enter password</h4>";
  }
 

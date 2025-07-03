@@ -43,7 +43,7 @@ if ($result->num_rows === 0) {
   </script>";
 }else{
   echo "<script type='text/javascript'>
-  alert('Your request has been sent to admin wait for our call');
+  alert('Your request has been already sent to admin wait for our call');
   window.location.href = './profile.php?id=" . $_SESSION['id'] . "';
   </script>";
 
