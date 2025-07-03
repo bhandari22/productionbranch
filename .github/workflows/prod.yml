@@ -1,7 +1,9 @@
 name: sonarqube scan and deployment
+
 on:
-    push:
+  push:
       branches: [ prodbranch ]
+
 jobs:
     scan and deploy:
        runs-on: ubuntu-latest
