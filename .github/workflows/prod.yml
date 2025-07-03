@@ -9,7 +9,6 @@ jobs:
        runs-on: ubuntu-latest
        env:
          VERSION_TAG: v1.0.${{ github.run_number }}
-       
        steps:
          - name: Checkout Code
            uses: actions/checkout@v4
@@ -35,8 +34,8 @@ jobs:
               chmod 600 ~/.ssh/id_rsa
               ssh-keyscan 101.53.150.196 >> ~/.ssh/known_hosts
 
-          - name: Deploy to server
-            if: success()
-            run: |
+         - name: Deploy to server
+           if: success()
+           run: |
                echo "Deploying $VERSION_TAG on remote server... "
                ssh root@101.53.150.196 "bash /var/www/prod.sh"  
