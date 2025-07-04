@@ -19,7 +19,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v2
         with:
           args: >
-            -Dsonar.projectKey=bhandari22_testbranch
+            -Dsonar.projectKey=testbranch
             -Dsonar.organization=bhandari22
             -Dsonar.sources=.
             -Dsonar.exclusions=vendor/**,tests/**,.github/**
