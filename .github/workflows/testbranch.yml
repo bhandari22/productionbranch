@@ -3,7 +3,9 @@ name: PHP CI/CD with SonarCloud
 on:
   push:
     branches: [ testbranch ]  # or dev or any branch you want
-
+  pull_request:
+    branches:
+       - testbranch
 jobs:
   scan-and-deploy:
     runs-on: ubuntu-latest
