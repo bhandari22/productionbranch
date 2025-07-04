@@ -3,7 +3,9 @@ name: PHP CI/CD with SonarCloud
 on:
   push:
     branches: [ testbranch ]  # or dev or any branch you want
-
+  pull_request:
+    branches:
+       - testbranch
 jobs:
   scan-and-deploy:
     runs-on: ubuntu-latest
@@ -19,7 +21,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v2
         with:
           args: >
-            -Dsonar.projectKey=bhandari22_testbranch
+            -Dsonar.projectKey=testbranch
             -Dsonar.organization=bhandari22
             -Dsonar.sources=.
             -Dsonar.exclusions=vendor/**,tests/**,.github/**
